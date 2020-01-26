@@ -7,6 +7,7 @@ const app = express();
 const something = require('./src/router/something');
 const bloodGroup = require('./src/router/bloodGroupRoutes');
 const countryGroup = require('./src/router/countryGroupRoutes');
+const stateGroup = require('./src/router/stateGroupRoutes');
 // Database connection;
 mongoose.connect(process.env.dbConnection , {useNewUrlParser: true});
 
@@ -24,6 +25,7 @@ app.use(bodyParser.json());
 app.use('/', something);
 app.use('/blood_group' , bloodGroup);
 app.use('/country_group', countryGroup );
+app.use('/state_group', stateGroup);
 
 // listen for requests
 app.listen(3000, () => {

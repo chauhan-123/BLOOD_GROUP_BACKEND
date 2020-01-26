@@ -7,7 +7,7 @@ var countryGroupSchema = new mongoose.Schema({
         trim:true
     },
     countryCode:{
-         type:String,
+         type:String, 
          required:true 
     },
     countryUniqueName:{
