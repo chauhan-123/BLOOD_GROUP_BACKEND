@@ -8,6 +8,8 @@ const something = require('./src/router/something');
 const bloodGroup = require('./src/router/bloodGroupRoutes');
 const countryGroup = require('./src/router/countryGroupRoutes');
 const stateGroup = require('./src/router/stateGroupRoutes');
+const districtGroup = require('./src/router/districtGroupRoutes');
+const userGroup = require('./src/router/userGroupRoutes');
 // Database connection;
 mongoose.connect(process.env.dbConnection , {useNewUrlParser: true});
 
@@ -26,6 +28,8 @@ app.use('/', something);
 app.use('/blood_group' , bloodGroup);
 app.use('/country_group', countryGroup );
 app.use('/state_group', stateGroup);
+app.use('/district_group' , districtGroup);
+app.use('/user_group' , userGroup);
 
 // listen for requests
 app.listen(3000, () => {
