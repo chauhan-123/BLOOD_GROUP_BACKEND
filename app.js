@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 // All ROutes define 
 app.use('/', something);
-app.use('/blood_group' , bloodGroup);
+app.use('/blood_Group' , bloodGroup);
 app.use('/country_group', countryGroup );
 app.use('/state_group', stateGroup);
 app.use('/district_group' , districtGroup);

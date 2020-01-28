@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const groupCtrl = require('../controllers/district-group-controller');
 
-router.post('/', groupCtrl.getdistrictGroup);
+router.get('/', groupCtrl.getdistrictGroup);
 
 
 module.exports = router;
