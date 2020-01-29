@@ -9,7 +9,6 @@ const district_group = {
         //         stateUniqueName:req.body.stateUniqueName,
         //         countryUniqueName:req.body.countryUniqueName
         //     }
-        //     console.log(data , "data")
         //     var myData = new districtGroup(data);
         //     myData.save().then(item => {
         //         res.status(200).json({ statusCode: 200, message: 'item saved to the database', result: item })

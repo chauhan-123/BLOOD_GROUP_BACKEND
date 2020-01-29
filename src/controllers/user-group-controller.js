@@ -2,7 +2,6 @@ const userModel = require('../models/userGroupModel');
 const userGroup = userModel.userGroup;
 const user_group = {
     getuserGroup: async (req, res) => {
-        console.log(req.body,"=========>")
         // try{
         //     var data = {
         //         userName: req.body.userName,
