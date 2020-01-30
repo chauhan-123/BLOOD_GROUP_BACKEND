@@ -3,7 +3,7 @@ const stateGroup = stateModel.stateGroup;
 const state_group = {
     getstateGroup: (req, res) => {
         try {
-            stateGroup.find().then((user, err) => {
+            stateGroup.aggregate([{$match :{"countryUniqueName":`${req.body.country}`}}]).then((user, err) => {
                 res.status(200).json({ statusCode: 200, message: 'data successfully get from database', data: user })
             })
         } catch (e) {
