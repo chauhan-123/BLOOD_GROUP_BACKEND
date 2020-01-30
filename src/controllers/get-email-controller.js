@@ -26,6 +26,7 @@ const user_group = {
             if (error) {
                 console.log(error);
             } else {
+                res.status(200).json({statusCode:200 , 'message':"email send to the registered user" , data : user})
                 console.log('Email sent: ' + info.response);
             }
         });
