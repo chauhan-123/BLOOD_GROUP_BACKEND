@@ -2,6 +2,7 @@ const userModel = require('../models/userGroupModel');
 const userGroup = userModel.userGroup;
 const user_group = {
     getuserGroup: async (req, res) => {
+        console.log(req.body, "=======>")
         // try{
         //     var data = {
         //         userName: req.body.userName,
@@ -23,10 +24,10 @@ const user_group = {
         // }
             try {
                 let user = await userGroup.aggregate([{$match:{
-                     "bloodGroupName":`${req.body.blood}`, 
-                     "countryUniqueName":`${req.body.country}` , 
-                     "stateUniqueName":`${req.body.state}` , 
-                     "districtUniqueName":`${req.body.district}`}}])
+                     "bloodGroupName":`${req.body.bloodGroup}`, 
+                     "countryUniqueName":`${req.body.countryGroup}` , 
+                     "stateUniqueName":`${req.body.stateGroup}` , 
+                     "districtUniqueName":`${req.body.districtGroup}`}}])
                     res.status(200).json({ statusCode: 200, message: 'data successfully get from database', data: user })
             } catch (e) {
                 res.status(500).json({ statusCode: 500, error: e });
